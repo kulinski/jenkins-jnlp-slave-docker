@@ -21,6 +21,6 @@ VOLUME /home/jenkins
 WORKDIR /home/jenkins
 
 # Don't run as jenkins *temporarily* as we work out exposing the docker socket
-USER jenkins
+#USER jenkins
 
 ENTRYPOINT ["jenkins-slave"]
