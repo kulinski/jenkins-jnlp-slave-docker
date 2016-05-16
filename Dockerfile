@@ -2,8 +2,11 @@ FROM java:openjdk-8-jdk-alpine
 MAINTAINER Chris Kulinski
 
 # Get a copy of docker executable to use within this container
+# also need bash for jenkins slave script
+# and need ssh to work with git+ssh urls
 RUN apk --no-cache add \
 	docker \
+	openssh-client \
 	bash
 
 # Add all the Jenkins JNLP stuff
