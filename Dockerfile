@@ -1,4 +1,4 @@
-FROM java:openjdk-8-jdk-alpine
+FROM kulinski/java-jre-alpine
 MAINTAINER Chris Kulinski
 
 # Get a copy of docker executable to use within this container
@@ -6,6 +6,7 @@ MAINTAINER Chris Kulinski
 # and need ssh to work with git+ssh urls
 RUN apk --no-cache add \
 	docker \
+	curl \
 	openssh-client \
 	bash
 
